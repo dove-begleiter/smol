@@ -5,7 +5,7 @@ html {
 {{ with .Site.Params.colors.light }}
 :root {
     --bgcolor: {{ .bg | default "white" }};
-    --fontcolor: {{ .bg | default "#444" }};
+    --fontcolor: {{ .font | default "#444" }};
     --linkcolor: {{ .link | default "#00e" }};
     --visitedcolor: {{ .visited | default "#551a8b" }};
     --precolor: {{ .pre | default "#fff" }};
@@ -16,8 +16,8 @@ html {
 {{ with .Site.Params.colors.dark }}
 @media (prefers-color-scheme: dark) {
     :root {
-            --bgcolor: {{ .bg | default "black" }};
-        --fontcolor: {{ .bg | default "white" }};
+        --bgcolor: {{ .bg | default "black" }};
+        --fontcolor: {{ .font | default "white" }};
         --linkcolor: {{ .link | default "#5bf" }};
         --visitedcolor: {{ .visited | default "#ae5ee0" }};
         --precolor: {{ .pre | default "#fff" }};
