@@ -1,11 +1,10 @@
 # smol
 
-A minimal, monospaced blogging theme for Hugo that respects your privacy and is easy on your bandwidth. A demo can be found at https://smol-demo.morph.sh.
+A minimal, monospaced blogging theme for Hugo that respects your privacy and is easy on your bandwidth.
+
+Forked from [smol](https://github.com/colorchestra/smol) by morph
 
 smol is based on [Blank](https://github.com/Vimux/Blank) created by [Vimux](https://github.com/Vimux).
-
-
-![Screenshot](/images/tn.png)
 
 ## Features
 
@@ -16,19 +15,19 @@ smol is based on [Blank](https://github.com/Vimux/Blank) created by [Vimux](http
 
 ## Installation
 
-In your Hugo site `themes` directory, run:
+In your Hugo site's root directory, run:
 
 ```
-git clone https://github.com/colorchestra/smol
+git submodule add https://github.com/dove-begleiter/smol.git themes/smol
 ```
 
-Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `smol`.
+Next, open `hugo.toml` in the base of the Hugo site and ensure the theme option is set to `smol`.
 
 ```
 theme = "smol"
 ```
 
-Lastly, add the following lines to your `config.toml` to set site parameters and make use of all the menu entries in the header and footer sections if you need them.
+Lastly, add the following lines to your `hugo.toml` to set site parameters and make use of all the menu entries in the header and footer sections if you need them.
 
 ```
 # Parameters
@@ -85,8 +84,8 @@ You can add captions to images (technically using `<figcaption>` HTML tags) by a
 
 ## Contributing
 
-Have you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](https://github.com/colorchestra/smol/issues) to let me know. Or make directly a [pull request](https://github.com/colorchestra/smol/pulls).
+Have you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](https://github.com/dove-begleiter/smol/issues) to let me know. Or make directly a [pull request](https://github.com/dove-begleiter/smol/pulls).
 
 ## License
 
-This theme is released under the [MIT license](https://github.com/colorchestra/smol/blob/master/LICENSE).
+This theme is released under the [MIT license](https://github.com/dove-begleiter/smol/blob/master/LICENSE).
