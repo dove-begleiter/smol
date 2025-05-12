@@ -9,7 +9,7 @@ min_version = "0.20"
 
 [author]
   name = "dove-begleiter"
-  homepage "macroura.com"
+  homepage = "macroura.com"
 
 [original]
   name = "morph"

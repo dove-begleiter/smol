@@ -2,25 +2,29 @@ html {
     overflow-y: scroll
 }
 
+{{ with .Site.Params.colors.light }}
 :root {
-    --bgcolor: white;
-    --fontcolor: #444;
-    --linkcolor: #00e;
-    --visitedcolor: #551a8b;
-    --precolor: #fff;
-    --prebgcolor: #000;
+    --bgcolor: {{ .bg | default "white" }};
+    --fontcolor: {{ .bg | default "#444" }};
+    --linkcolor: {{ .link | default "#00e" }};
+    --visitedcolor: {{ .visited | default "#551a8b" }};
+    --precolor: {{ .pre | default "#fff" }};
+    --prebgcolor: {{ .prebg | default "#000" }};
 }
+{{ end }}
 
+{{ with .Site.Params.colors.dark }}
 @media (prefers-color-scheme: dark) {
     :root {
-        --bgcolor: black;
-        --fontcolor: white;
-        --linkcolor: #5bf;
-        --visitedcolor: #ae5ee0;
-        --precolor: #fff;
-        --prebgcolor: #383838;
+            --bgcolor: {{ .bg | default "black" }};
+        --fontcolor: {{ .bg | default "white" }};
+        --linkcolor: {{ .link | default "#5bf" }};
+        --visitedcolor: {{ .visited | default "#ae5ee0" }};
+        --precolor: {{ .pre | default "#fff" }};
+        --prebgcolor: {{ .prebg | default "#383838" }};
     }
 }
+{{ end }}
 
 body {
     max-width: 800px;
